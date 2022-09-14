@@ -4,14 +4,17 @@
 Console.WriteLine("Введите число: ");
 int number = int.Parse(Console.ReadLine()!);
 
-int count = 0;
-int n = number; // чтобы вывести неизмененый number в ответе
+//int n = number; // чтобы вывести неизмененый number в ответе
 
-while (n > 0)  
+Console.WriteLine($"Количество цифр в числе {number}: {FindNumLength(number)}");
+
+int FindNumLength(int number)
 {
-	int digit = n % 10; // достать последнюю цифру
-	n = n / 10;   		// оставить все, кроме последней цифры
-    count++;
+    int count = 0;
+    while (number > 0)  
+    { 
+	    number = number / 10;   		
+        count++;
+    }
+return count;
 }
-
-Console.WriteLine($"Количество цифр в числе {number}: {count}");
