@@ -3,9 +3,9 @@
 в натуральную степень B.*/
 
 Console.WriteLine("Введите через запятую числа A и B: ");
-string input = Console.ReadLine();
-int[] seriesNums = Array.ConvertAll(input.Split(','), int.Parse);
 
+int[] seriesNums = Array.ConvertAll(Console.ReadLine().Split(','), int.Parse);
+// работает, но что-то очень длинно и не понятно получается
 Console.WriteLine($"{seriesNums[0]} в степени {seriesNums[1]} = {Exponentiate(seriesNums)}");
 
 
