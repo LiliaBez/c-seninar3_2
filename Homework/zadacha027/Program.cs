@@ -4,6 +4,9 @@
 Console.WriteLine("Введите число ");
 int number = int.Parse(Console.ReadLine()!);
 
+Console.WriteLine($"Сумма цифр в числе {number} равняется {FindSum(number)}");
+
+int FindSum(int number){
 int num = number;
 int sum = 0;
 for (int i = 0; num > 0; i++)
@@ -12,7 +15,7 @@ for (int i = 0; num > 0; i++)
 	    num = num / 10; 
         sum = sum + digit;
     }
+    return sum;
+}
 
-Console.WriteLine($"Сумма цифр в числе {number} равняется {sum}");
 
-// ужас... так долго билась, а такая глупая ошибка оказалась
